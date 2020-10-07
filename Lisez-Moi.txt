@@ -1,0 +1,96 @@
+
+TP Langage C/Reseaux
+
+Réalisé par : FREGEFOND Théo et Bayle-Sales Axel 
+Date de création: Janvier-Mars 2017
+Classe : 3 IMACS-AE C
+
+Cadre : INSA Toulouse, Bureau Etude Langage C et Réseau
+
+
+
+
+
+Bienvenu dans le manuel de l’utilisateur !
+
+
+
+###################
+     SOMMAIRE
+
+
+I - Compilation 
+II - Exécution
+III - Avancée du projet et remarques
+IV - Contacts
+
+#################
+
+
+
+
+
+I - Compilation 
+
+	L’ensemble des fichiers présent dans le dossier ont été référence dans un fichier makefile, cela signifie que plusieurs compilation vont être effectuées pour créer 	l’exécutable qui sera appelé tsock. 
+
+	Dans un terminal, rendez vous dans le répertoire où est contenue le makefile et tapez la commande : make
+
+RQ : Chaque compilation est réalisé avec un -Wall pour prévenir des Warnings mais aussi d’un -std=gnu99 pour compiler sans Warning en c99.
+
+
+
+
+
+
+
+
+
+II - Exécution
+
+Pour exécuter le programme il suffira de taper la commande: ./tsock
+
+Vous pourrez alors faire suivre la commande d’un ensemble des modes d’utilisation : -p / -s / -u / -b / -r##### / -e#####
+Mais aussi d’options : -l## -n#####
+Et surtout le nom de l’hôte distant et son numéro de port
+
+
+
+RQ: La longueur des message a été limitée à 100 dans le Header par le define MAXSIZE, libre à vous de le modifier.
+
+
+
+
+
+
+
+
+III - Avancée du projet et remarques
+
+
+Le projet est totalement fonctionnel :
+
+-Echanges de messages en UDP,TCP et par l’intermédiaire d’une BAL.
+
+-Echanges de messages de n’importes quelle taille dans tous les modes
+
+-Pour la BAL, une structure de client a été ajoutée pour le serveur dans le but de simplifier la compréhension du programme et aussi pour simplifier le renvoi des messages.
+
+-Le programme serveur fonctionne de manière totalement indépendante en lecture et en écriture; un message est stocké dans la structure du client avant de lui être envoyé. Cela permet de conserver le message quand l’écriture n’est pas accessible et de continuer à lire.
+
+-La question bonus a été traitée, le serveur de la BAL reçois un premier message « primitive »  pour définir la taille des messages qu’il va recevoir ou qu’il doit envoyer.
+
+
+
+
+
+IV - Contacts
+
+
+Pour toutes informations supplémentaires, le support client est disponible aux adresses :
+
+fregefon@etud.insa-toulouse.fr
+bayle-sa@etud.insa-toulouse.fr
+
+
+
